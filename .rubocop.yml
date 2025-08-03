@@ -1,6 +1,12 @@
 # Omakase Ruby styling for Rails
 inherit_gem: { rubocop-rails-omakase: rubocop.yml }
 
+# Exclude view files from RuboCop analysis
+AllCops:
+  Exclude:
+    - "app/views/**/*.html.erb"
+    - "app/views/**/*.html.haml"
+    - "app/views/**/*.html.slim"
 # Overwrite or add rules to create your own house style
 #
 # # Use `[a, [b, c]]` not `[ a, [ b, c ] ]`
