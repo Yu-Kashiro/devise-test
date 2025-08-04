@@ -8,6 +8,11 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # def twitter
   # end
 
+  def github
+    @user = User.from_omniauth(request.env["omniauth.auth"])
+    sign_in_and_redirect @user # sign_in_and_redirectはOAuthのメソッド
+  end
+
   # More info at:
   # https://github.com/heartcombo/devise#omniauth
 
