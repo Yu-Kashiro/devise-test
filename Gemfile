@@ -49,6 +49,8 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  gem 'dotenv-rails'
 end
 
 group :development do
@@ -63,3 +65,6 @@ group :test do
 end
 
 gem "devise", "~> 4.9"
+gem 'omniauth'
+gem 'omniauth-github'
+gem 'omniauth-rails_csrf_protection'
